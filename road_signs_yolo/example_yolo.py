@@ -8,8 +8,8 @@ data_yaml_path = Path(__file__).resolve().parent / "data.yaml"
 dataset = ls.Dataset.create("yolo_example")
 dataset.add_samples_from_yolo(
     data_yaml=data_yaml_path,
-    input_split="train",
+    input_split="test",
 )
 
-# Start the GUI to explore the dataset
+# Start the UI application on the port defined with the LIGHTLY_STUDIO_PORT env variable or 8001 by default.
 ls.start_gui()
