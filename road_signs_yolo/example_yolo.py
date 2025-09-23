@@ -1,16 +1,15 @@
-# We import the DatasetLoader class from the lightly_studio module
 from pathlib import Path
 
-from lightly_studio import DatasetLoader
-
-# Create a DatasetLoader instance
-loader = DatasetLoader()
+import lightly_studio as ls
 
 data_yaml_path = Path(__file__).resolve().parent / "data.yaml"
-loader.from_yolo(
-    data_yaml_path=str(data_yaml_path),
-    input_split="test",
+
+# Create a dataset and add the samples from the yolo format
+dataset = ls.Dataset.create("yolo_example")
+dataset.add_samples_from_yolo(
+    data_yaml=data_yaml_path,
+    input_split="train",
 )
 
-# We start the UI application on port 8001
-loader.start_gui()
+# Start the GUI to explore the dataset
+ls.start_gui()

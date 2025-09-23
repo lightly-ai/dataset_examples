@@ -1,16 +1,16 @@
-# We import the DatasetLoader class from the lightly_studio module
 from pathlib import Path
 
-from lightly_studio import DatasetLoader
-
-# Create a DatasetLoader instance
-loader = DatasetLoader()
+import lightly_studio as ls
 
 current_dir = Path(__file__).resolve().parent
-loader.from_coco_instance_segmentations(
-    annotations_json_path=str(current_dir / "instances_train2017.json"),
-    img_dir=str(current_dir / "images"),
+
+# Create a DatasetLoader instance
+dataset = ls.Dataset.create("coco_example")
+dataset.add_samples_from_coco(
+    annotations_json=str(current_dir / "instances_train2017.json"),
+    images_path=str(current_dir / "images"),
+    annotation_type=ls.AnnotationType.INSTANCE_SEGMENTATION,
 )
 
-# We start the UI application on port 8001
-loader.start_gui()
+# We start the UI application on the port defined with the LIGHTLY_STUDIO_PORT env variable or 8001 by default.
+ls.start_gui()
