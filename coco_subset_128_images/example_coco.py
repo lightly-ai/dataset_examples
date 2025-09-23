@@ -4,7 +4,7 @@ import lightly_studio as ls
 
 current_dir = Path(__file__).resolve().parent
 
-# Create a DatasetLoader instance
+# Create a dataset and add the samples from the coco format
 dataset = ls.Dataset.create("coco_example")
 dataset.add_samples_from_coco(
     annotations_json=str(current_dir / "instances_train2017.json"),
