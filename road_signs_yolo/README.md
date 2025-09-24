@@ -1,0 +1,2 @@
+Road sign dataset downloaded from Roboflow. See [here](https://universe.roboflow.com/roboflow-100/road-signs-6ih4y/dataset/2) for details.
+It was reduced to 128 files in each of the three splits, making the github repo smaller and thus faster to clone.
