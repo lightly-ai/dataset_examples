@@ -1,0 +1,1 @@
+{"file_name": "000000134169.jpg", "predictions": [{"category_id": 0, "bbox": [17, 9, 273, 616], "score": 0.97}, {"category_id": 0, "bbox": [235, 169, 174, 315], "score": 0.95}, {"category_id": 67, "bbox": [391, 472, 51, 20], "score": 0.87}, {"category_id": 27, "bbox": [169, 164, 14, 58], "score": 0.66}]}
