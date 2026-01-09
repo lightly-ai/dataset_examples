@@ -1,7 +1,7 @@
 This is a subset of 128 images of the [COCO 2017 Train/Val dataset](https://cocodataset.org/#download).
 It contains not only object detections, but also instance segmentations.
 
-The predictions in `/predictions` are generated using `lightly-train` with `dinov3/convnext-tiny-ltdetr-coco`. Pseudo code:
+The predictions in `/predictions` are generated using `lightly-train` with `dinov3/convnext-tiny-ltdetr-coco` in Lightly format. Pseudo code:
 
 ```
 import json
