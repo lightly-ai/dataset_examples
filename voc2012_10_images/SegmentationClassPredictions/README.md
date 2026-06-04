@@ -1,9 +1,8 @@
-Synthetic prediction masks for semantic-segmentation evaluation testing.
-
-These files are derived from `../SegmentationClass` and intentionally altered:
-- partial foreground removal to background (class 0),
-- small spatial shifts for some masks,
-- class swaps in local regions for others,
-- sparse foreground pixel dropouts.
+Synthetic prediction masks derived from `../SegmentationClass` for
+semantic-segmentation evaluation testing.
+Augmentations applied:
+- **Masking out parts** — a chunk of an object is set to background.
+- **Spatial shifts** — some masks are translated by a few pixels.
+- **Class swap**
 
 Use this folder as prediction masks while `SegmentationClass` remains ground truth.
