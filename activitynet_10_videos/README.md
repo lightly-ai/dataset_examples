@@ -11,10 +11,3 @@ Layout::
         videos/{video_id}.mp4
         activity_net.v1-3.min.json
 
-Import in Lightly Studio::
-
-    dataset.add_videos_from_path(path="dataset_examples/activitynet_10_videos/videos")
-    dataset.add_annotations_from_activitynet(
-        annotations_json="dataset_examples/activitynet_10_videos/activity_net.v1-3.min.json",
-        annotation_source="activitynet",
-    )
